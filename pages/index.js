@@ -2288,13 +2288,13 @@ export default function ModelDisplay() {
     <>
       <div style={{ height: "100vh", width: "100vw" }}>
         <Canvas camera={{ position: [10, 2, 1], fov: 69 }}>
-          <color attach="background" args={["#050505"]} />
+          <color attach="background" args={["white"]} />
           <OrbitControls />
-          <ambientLight position={(-3, 6, -20)} />
-          <directionalLight position={(-25, 6, -20)} />
-          {/* <Suspense fallback={<Box />}> */}
+          {/* <ambientLight position={(-3, 6, -2)} intensity={0.08} /> */}
+          <directionalLight position={(4.0762,5.9039,1.0055)} intensity={0.8}/>
+          
           <Suspense fallback={<Loader />}>
-            <Model position={(0, 0, -2)} />
+            <Model position={(0, 0, 0)} />
           </Suspense>
         </Canvas>
       </div>
